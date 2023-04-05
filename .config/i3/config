@@ -75,8 +75,8 @@ bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec "flameshot /home/paul/Pictures/Screenshots/Screenshots-%Y-%m-%d-%H-%M-%S.png"
-bindsym $mod+Print exec "flameshot gui /home/paul/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png"
+bindsym Print exec "flameshot screen"
+bindsym $mod+Print exec "flameshot gui"
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
