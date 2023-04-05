@@ -1,0 +1,53 @@
+scrolling:
+  history: 50000
+font:
+  normal:
+    family: Iosevka Nerd Font
+    style: Regular
+  bold:
+    family: Iosevka Nerd Font
+    style: Bold
+  italic:
+    family: Iosevka Nerd Font
+    style: Italic
+  bold_italic:
+    family: Iosevka Nerd Font
+    style: Bold Italic
+  size: 7.7
+colors:
+  primary:
+    background: "#282a36"
+    foreground: "#f8f8f2"
+  normal:
+    black: "#000000"
+    red: "#ff5555"
+    green: "#50fa7b"
+    yellow: "#f1fa8c"
+    blue: "#caa9fa"
+    magenta: "#ff79c6"
+    cyan: "#8be9fd"
+    white: "#bfbfbf"
+  bright:
+    black: "#575b70"
+    red: "#ff6e67"
+    green: "#5af78e"
+    yellow: "#f4f99d"
+    blue: "#caa9fa"
+    magenta: "#ff92d0"
+    cyan: "#9aedfe"
+    white: "#e6e6e6"
+low: "#dca060"
+blue: "#3182bd"
+magenta: "#756bb1"
+cyan: "#80b1d3"
+white: "#fcfdfe"
+a085" white: "#ffffff"
+dim:
+  black: "#31363b"
+  red: "#783228"
+  green: "#17a262"
+  yellow: "#b65619"
+  blue: "#1b668f"
+  magenta: "#614a73"
+  cyan: "#186c60"
+  white: "#63686d"
