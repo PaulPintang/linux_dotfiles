@@ -33,7 +33,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+x kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -p "Search:"
 
 # launch categorized menu / rofi
 bindsym $mod+z exec rofi -show drun
