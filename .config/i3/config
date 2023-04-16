@@ -428,3 +428,5 @@ exec_always --no-startup-id dunst
 #battery
 exec_always --no-startup-id ~/.local/bin/batterywarning.sh 
 #export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+exec_always --no-startup-id bluetoothctl power off

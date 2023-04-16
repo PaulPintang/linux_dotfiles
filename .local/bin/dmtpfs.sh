@@ -17,7 +17,7 @@ else
 fi
 
 if [ ! -n "$(find "$Dir$Name" -maxdepth 0 -empty)" ]; then
-  fusermount -u "$Dir$Name" && notify-send "Android Mount" "Device Unmounted"
+  fusermount -u "$Dir$Name" && notify-send "Android Mount" "$Name Unmounted"
 else
-  simple-mtpfs --device "$Id" "$Dir$Name" -o allow_root && notify-send "Android Mount" "Device Mounted in $Dir$Name"
+  simple-mtpfs --device "$Id" "$Dir$Name" -o allow_root && notify-send "Android Mount" "$Name Mounted in $Dir$Name"
 fi
