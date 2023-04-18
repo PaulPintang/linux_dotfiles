@@ -279,24 +279,13 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# Lock screen
-#bindsym $mod+9 exec --no-startup-id 
-
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-#exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-#exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
-# exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
-#exec_always --no-startup-id fix_xcursor
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -329,21 +318,14 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-# hide/unhide i3status bar
-#bindsym $mod+m bar mode toggle
 
 # Theme colors
 #  class                   border  backgr. text    indic.   child_border
-#  client.focused          #FF0000 #556064 #80FFF9 #FDF6E3
    client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
    client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
    client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
    client.placeholder      #000000 #0c0c0c #ffffff #000000 
-                                                                     
-#  client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010 #063340                                                                            
-#  client.unfocused        #0d1010 #212121 #d9d9d9 #424242 #063340                                                                            
    client.focused          #BD93F9 #556064 #80FFF9 #BD93F9 #BD93F9
-
    client.background       #2B2C2B
 
 #############################
@@ -405,10 +387,7 @@ mode "$mode_gaps_outer" {
 }
 
 # Polybar Script
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
-exec_always --no-startup-id polybar 
-# set desktop background with custom effect
-#exec --no-startup-id betterlockscreen -w dim
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Alternative (set last used background)
 exec --no-startup-id source ~/.fehbg
@@ -419,14 +398,12 @@ exec_always --no-startup-id xrandr --output HDMI-1 --above eDP-1 --auto
 #for picom
 exec_always --no-startup-id picom --experimental-backends -b
 
-#for linux server
-#systemctl stop httpd mysqld
-
 #for notification/dunst
 exec_always --no-startup-id dunst
 
 #battery
 exec_always --no-startup-id ~/.local/bin/batterywarning.sh 
-#export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
 exec_always --no-startup-id bluetoothctl power off
+exec_always --no-startup-id xset s off -dpms
+exec_always --no-startup-id ~/.local/bin/suspendme.sh
