@@ -63,15 +63,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id "~/.local/bin/changevolume.sh 
 #bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute 0 toggle; notify-send 'Sound muted!'"
 bindsym XF86AudioMute exec --no-startup-id "~/.local/bin/changevolume.sh mute"
 # Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-#bindsym $mod+b exec brave
-bindsym $mod+m exec caprine
-bindsym $mod+b exec firefox
+bindsym $mod+b exec brave
+bindsym $mod+f exec firefox
 bindsym $mod+c exec google-chrome-stable
-bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -95,7 +89,7 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
+bindsym $mod+Shift+j move left‘
 bindsym $mod+Shift+k move down
 #bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
@@ -114,10 +108,9 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 # split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
-#bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -281,11 +274,7 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
-exec_always --no-startup-id ff-theme-util
+exec --no-startup-id nitrogen --restore; sleep 1
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -393,17 +382,15 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id source ~/.fehbg
 
 #for dual monitor
-exec_always --no-startup-id xrandr --output HDMI-1 --above eDP-1 --auto
+#exec_always --no-startup-id xrandr --output HDMI-1 --above eDP-1 --auto
 
 #for picom
-exec_always --no-startup-id picom --experimental-backends -b
+exec_always --no-startup-id picom
 
 #for notification/dunst
 exec_always --no-startup-id dunst
 
 #battery
 exec_always --no-startup-id ~/.local/bin/batterywarning.sh 
-
-exec_always --no-startup-id bluetoothctl power off
 exec_always --no-startup-id xset s off -dpms
 exec_always --no-startup-id ~/.local/bin/suspendme.sh
