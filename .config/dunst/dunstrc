@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 250
+    width = 325
 
     # The maximum height of a single notification, excluding the frame.
     height = 300
@@ -33,7 +33,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 15x38
+    offset = 20x50
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -111,7 +111,7 @@
 
     ### Text ###
 
-    font = Iosevka Nerd Font 8
+    font = Iosevka Nerd Font 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.

@@ -33,7 +33,7 @@ white = "#63686d"
 yellow = "#b65619"
 
 [font]
-size = 7.7
+size = 11
 
 [font.bold]
 family = "Iosevka Nerd Font"
