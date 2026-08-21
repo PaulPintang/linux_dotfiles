@@ -1,4 +1,5 @@
 Net/ThemeName "Dracula"
 Net/IconThemeName "Dracula"
 Gtk/CursorThemeName "Banana"
+Gtk/CursorThemeSize 28
 Gtk/FontName "Iosevka Nerd Font 11"
